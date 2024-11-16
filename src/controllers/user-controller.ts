@@ -47,7 +47,17 @@ class UserController {
 		}
 	}
 
-	// static async login(req, res) {}
+	static async login(req: Request, res: Response) {
+		try {
+			if (!req.body?.username || !req.body?.password) {
+				return res.status(400).send({
+					message: "Credintials are incomplete!",
+				});
+			}
+
+			
+		} catch (error) {}
+	}
 }
 
 export default UserController;
