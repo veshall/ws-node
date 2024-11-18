@@ -13,6 +13,11 @@ const userSchema = new Schema(
 			type: String,
 			require: ["Password is required!"],
 		},
+		email: {
+			type: String,
+			unique: true,
+			trim: true,
+		},
 	},
 	{ timestamps: true }
 );
